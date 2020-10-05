@@ -1,5 +1,49 @@
 .nav {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  width: $widthHeader;
+  height: $heightHeader;
 
+  & li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: $heightHeader;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--active::before {
+    content: "";
+    position: absolute;
+    @extend %triangleNav;
+
+    left: $positionPseudoElement;
+    top: 0;
+
+    transform: translateX(-$positionPseudoElement);
+  }
+
+  &__link {
+    padding-bottom: 10px;
+    position: relative;
+
+    &--active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: $positionPseudoElement;
+
+      @extend %arrowNav;
+      transform: translateX($positionPseudoElement) rotate(135deg);
+    }
+  }
+
+  &__info-text {
+    margin-top: 5px;
+
+    font-style: italic;
+    color: gray;
+  }
 }

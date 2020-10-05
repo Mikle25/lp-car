@@ -1,9 +1,9 @@
 .header {
   display: grid;
   grid-template-columns: 30% 70%;
-  height: 150px;
+  grid-template-rows: 250px;
   align-items: center;
-  padding: 0 20px 0 10px;
+  padding: 0 30px 0 20px;
 
   background: linear-gradient(to top left,rgb(100, 113, 106), rgb(42, 59, 59));
 
@@ -11,22 +11,31 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: $heightHeader;
 
     & > span {
-      padding-left: 10px;
-      color: gray;
+      padding-left: $paddingLogo;
+
+      font-style: italic;
+      color: $colorText;
     }
   }
 
   &__logo-t {
-    color: #fff;
-    padding-right: 10px;
+    color: $colorTitle;
+    padding-right: $paddingLogo;
 
-    border-right: 2px solid gray;
+    border-right: 2px solid $colorText;
     font-size: 25px;
 
     & > span {
-      color: gray;
+      color: $colorText;
     }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    height: $heightHeader;
   }
 }

@@ -1,4 +1,12 @@
-%h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+%arrowNav {
+  width: $sizeArrowNav;
+  height: $sizeArrowNav;
+
+  border-top: 2px solid $colorTitle;
+  border-right: 2px solid $colorTitle;
+}
+
+%triangleNav {
+  border: 10px solid transparent;
+  border-top: 10px solid $colorTitle;
 }

@@ -1,0 +1,48 @@
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  padding: 50px 20px;
+
+  background-color: $bgColorServices;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    color: $colorTitle;
+    text-align: center;
+
+    & h4 {
+      text-transform: uppercase;
+    }
+
+    & button {
+      cursor: pointer;
+      width: 100px;
+      padding: 20px 0;
+
+      outline-style: none;
+      text-transform: uppercase;
+      color: $colorTitle;
+      border: none;
+      background-color: transparent;
+      border-bottom: 2px solid $colorText;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-rows: auto;
+    align-items: center;
+    grid-row-gap: 5px;
+    height: 100%;
+    margin-bottom: 20px;
+
+    & li {
+      color: $colorText;
+    }
+  }
+}
