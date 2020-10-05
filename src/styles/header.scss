@@ -1,0 +1,32 @@
+.header {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 150px;
+  align-items: center;
+  padding: 0 20px 0 10px;
+
+  background: linear-gradient(to top left,rgb(100, 113, 106), rgb(42, 59, 59));
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & > span {
+      padding-left: 10px;
+      color: gray;
+    }
+  }
+
+  &__logo-t {
+    color: #fff;
+    padding-right: 10px;
+
+    border-right: 2px solid gray;
+    font-size: 25px;
+
+    & > span {
+      color: gray;
+    }
+  }
+}
