@@ -1,0 +1,62 @@
+.info-service {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 0 20px 30px;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 200px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    color: $colorTitle;
+
+    & p {
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    & div {
+      margin: 10px 20px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: $positionPseudoElement;
+
+      border: 25px solid transparent;
+      border-left: 25px solid;
+
+      transform: translateY(-$positionPseudoElement) rotate(180deg);
+      transform-origin: 0 50%;
+    }
+
+    &--1 {
+      @include colorTriangle(#ea7878);
+    }
+    &--2 {
+      @include colorTriangle( #ccb96d);
+    }
+    &--3 {
+      @include colorTriangle( #5bb693);
+    }
+    &--4 {
+      @include colorTriangle( #a2b66f);
+    }
+  }
+}

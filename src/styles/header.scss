@@ -1,0 +1,41 @@
+.header {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 250px;
+  align-items: center;
+  padding: 0 30px 0 20px;
+
+  background: linear-gradient(to top left,rgb(100, 113, 106), rgb(42, 59, 59));
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: $heightHeader;
+
+    & > span {
+      padding-left: $paddingLogo;
+
+      font-style: italic;
+      color: $colorText;
+    }
+  }
+
+  &__logo-t {
+    color: $colorTitle;
+    padding-right: $paddingLogo;
+
+    border-right: 2px solid $colorText;
+    font-size: 25px;
+
+    & > span {
+      color: $colorText;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    height: $heightHeader;
+  }
+}
